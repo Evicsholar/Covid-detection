@@ -31,13 +31,16 @@
         <section class="portfolio-block contact">
             <div class="container">
                 <div class="heading">
+                    <h2 style="color: red;">{{ results }}</h2>
+                    <h2 style="color: red;">{{ result2 }}</h2>
+
                     <h2>Please fill in the details for Covid detection</h2>
                 </div>
                 <form action="/inputform" method="post" enctype=multipart/form-data>
-                    <div class="form-group"><label>Did you travel in the past few days?</label><input class="form-control item" type="text" id="name" name="travel"/></div>
-                    <div class="form-group"><label>Are you experiencing any tiredness or cough and cold?</label><input class="form-control item" type="text" id="subject" name="commonsym"/></div>
-                    <div class="form-group"><label>Are you experiencing difficulty in breathing</label><input class="form-control item" type="text" id="subject-1" name="majorsym"/></div>
-                    <div class="form-group"><label>Did you have any exposure to a Covid-19+ person?</label><input class="form-control item" type="text" id="subject-2" name="exposure"/></div>
+                    <div class="form-group"><label>Did you travel in the past few days?</label><input class="form-control item" type="checkbox" value=1 id="name" name="travel" /></div>
+                    <div class="form-group"><label>Are you experiencing any tiredness or cough and cold?</label><input class="form-control item" type="checkbox" value=1 id="subject" name="commonsym"/></div>
+                    <div class="form-group"><label>Are you experiencing difficulty in breathing</label><input class="form-control item" type="checkbox" value=1 id="subject-1" name="majorsym"/></div>
+                    <div class="form-group"><label>Did you have any exposure to a Covid-19+ person?</label><input class="form-control item" type="checkbox" value=1 id="subject-2" name="exposure"/></div>
                     <div class="form-group"><label>Upload</label><div class="bootstrap_img_upload">
 <div class="container py-5">
 
@@ -51,7 +54,7 @@
 
             <!-- Upload image input-->
             <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
-                <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                <input id="upload" type="file" name="image" onchange="readURL(this);" class="form-control border-0">
                 <label id="upload-label" for="upload" class="font-weight-light text-muted"></label>
                 <div class="input-group-append">
                     <label for="upload" class="btn btn-light m-0 rounded-pill px-4 float"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
@@ -76,7 +79,6 @@
             <div class="links"><a href="#">Documentation</a></div>
             <div class="social-icons"><a href="#"><i class="icon ion-social-instagram-outline"></i></a></div>
         </div>
-    <p>{{ results }}</p>
     </footer>
     <script src="../static/js/jquery.min.js"></script>
     <script src="../static/bootstrap/js/bootstrap.min.js"></script>
