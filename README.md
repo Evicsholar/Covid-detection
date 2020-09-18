@@ -1,9 +1,10 @@
 # Covid Detection
 Instuctions
 Run <strong><i>main.py</i></strong>
-1. Fill out the form
-2. Upload X-ray of your lungs
-3. Press Submit
+1. Install all the requirments
+2. Fill out the form
+3. Upload X-ray of your lungs
+4. Press Submit
 
 Prediction Of Viral Pneumonia , Bacterial Pneumonia and novel corona virus using Auto-Ml vision and Clue Analysis.
 
